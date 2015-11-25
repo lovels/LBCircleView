@@ -7,7 +7,7 @@
 ### 用法
 
 ```
-circleView = [[LBCircleView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    LBCircleView *circleView = [[LBCircleView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
     circleView.center = self.view.center;
     circleView.backgroundColor = [UIColor colorWithRed:255.0/255 green:157.0/255 blue:182.0/255 alpha:1.0];
     [self.view addSubview:circleView];
