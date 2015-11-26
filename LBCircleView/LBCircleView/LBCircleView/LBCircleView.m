@@ -153,6 +153,7 @@
         _percentLB = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 40, 20)];
         _percentLB.font = [UIFont systemFontOfSize:10];
         _percentLB.backgroundColor = [UIColor clearColor];
+        _percentLB.textAlignment = NSTextAlignmentCenter;
     }
     return _percentLB;
 }
