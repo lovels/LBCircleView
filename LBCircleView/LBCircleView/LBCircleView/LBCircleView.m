@@ -111,7 +111,7 @@
 }
 
 #pragma mark ----animations
--(void)circleAnimation:(CALayer*)layer
+- (void)circleAnimation:(CALayer*)layer
 {
     CABasicAnimation *basic=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     basic.duration = 2;
@@ -120,7 +120,7 @@
     [layer addAnimation:basic forKey:@"StrokeEndKey"];
 }
 
--(void)percentAnimate:(CALayer*)layer
+- (void)percentAnimate:(CALayer*)layer
 {
     CGFloat R = CGRectGetWidth(self.frame)/2.0-CGRectGetWidth(self.percentLB.frame)/2.0;
     CGPoint centerP = CGPointMake(CGRectGetWidth(self.frame)/2.0, CGRectGetWidth(self.frame)/2.0);
