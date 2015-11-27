@@ -57,7 +57,7 @@
 
 - (void)setProgress:(double)value animated:(BOOL)animate
 {
-    NSAssert(value < 1 && value > 0, @"value是包含0、1之间的数值");
+    NSAssert([self validateValue:value], @"value是包含0、1之间的数值");
     progress = value;
     animated = animate;
     radian = value * (2* M_PI - fabs(ChartStart - ChartEnd));
@@ -65,6 +65,15 @@
     self.percentLB.center = [self percentCenter];
     //圆环
     [self creatCircleLayer];
+}
+
+//检查传过来的百分比 是否合法
+- (BOOL)validateValue:(double)value
+{
+    if (value>= 0 && value <=1)
+        return YES;
+    
+    return NO;
 }
 
 //设置
